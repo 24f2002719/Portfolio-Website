@@ -10,24 +10,18 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    
+    <script src="script/cursor.js"></script>
+    <script src="script/animations.js"></script>
+    <script>
+        AOS.init();
+        const scroll = new LocomotiveScroll({
+            el: document.querySelector('[data-scroll-container]'),
+            smooth: true
+        });
+    </script>
 </head>
 
 <body>
-     <div class="background-animation">
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-        <div class="cube"></div>
-    </div>
-    
-        <div id="particles-js"></div>
-
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
-    <!-- ...existing code... -->
     <!-- Preloader -->
     <div class="scroll-progress"></div>
     <div id="preloader">
@@ -38,22 +32,22 @@
         <!-- Header / Navigation -->
         <header>
             <nav>
-  <div class="logo"><a href="#">Vivek K. Mali</a></div>
-  <ul class="nav-links">
-    <li><a href="#hero">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="burger">
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-  </div>
-</nav>
-
+                <div class="logo">
+                    <a href="#">Vivek K. Mali</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
         </header>
 
         <!-- Hero Section -->
@@ -81,7 +75,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <!-- Make sure profile-pic.jpg has a transparent or dark-friendly background -->
-                    <img src="img/profile.jpeg" alt="Vivek Kumar Mali" loading="lazy" width="300" height="300">
+                    <img src="img/profile.jpeg" alt="Vivek Kumar Mali">
                 </div>
                 <div class="about-text">
                     <p>
@@ -147,7 +141,7 @@
         <section id="projects" class="section">
             <h2>My Projects</h2>
             <p class="section-subtitle">Here are a few projects I've worked on. Find more on my <a
-                    href="https://github.com/24f2002719" target="_blank" class="text-link">GitHub</a>!</p>
+                    href="YOUR_GITHUB_PROFILE_LINK" target="_blank" class="text-link">GitHub</a>!</p>
             <div class="projects-grid">
                 <!-- Project Card 1 -->
                 <div class="project-card">
@@ -155,7 +149,7 @@
                         Unsplash for Project Image (example search: "data visualization dark", "abstract code pattern")
                         Image source: https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/python_projects.jpg" alt="Project 1 Thumbnail" loading="lazy" width="800" height="450" >
+                    <img src="img/python_projects.jpg" alt="Project 1 Thumbnail">
                     <div class="project-info">
                         <h3>Python Projects Collection</h3>
                         <p>A collection of interactive Python applications showcasing fundamental programming concepts
@@ -179,7 +173,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="img/data_visualization.jpg" alt="BDM Project Thumbnail" loading="lazy" width="800" height="450">
+                    <img src="img/data_visualization.jpg" alt="BDM Project Thumbnail">
                     <div class="project-info">
                         <h3>Business Data Management Capstone</h3>
                         <p>Developed comprehensive business analytics solution analyzing market trends and customer
@@ -216,10 +210,11 @@
                         Unsplash for Project Image (example search: "machine learning abstract dark", "neural network glow")
                         Image source: https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG1hY2hpbmUlMjBsZWFybmluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/macine_learning.jpg" alt="Project 2 Thumbnail" loading="lazy" width="800" height="450">
+                    <img src="img/macine_learning.jpg" alt="Project 2 Thumbnail">
                     <div class="project-info">
                         <h3>ML Model for Crop and Fertilizer Recommandation</h3>
-                        <p>This project aims to assist farmers and agricultural professionals by providing intelligent recommendations for crop selection and fertilizer usage based on environmental and soil conditions. By leveraging machine learning techniques, the system analyzes input parameters to suggest optimal agricultural practices.</p>
+                        <p>Description of a machine learning project. What data did you use? What was the outcome or
+                            accuracy?</p>
                         <div class="technologies">
                             <span>Python</span><span>Scikit-learn</span><span>Jupyter</span><span>Seaborn</span>
                         </div>
@@ -236,10 +231,11 @@
                         Unsplash for Project Image (example search: "web app interface dark", "django code")
                         Image source: https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGphbmdvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/web_dev.jpg" alt="Project 4 Thumbnail" loading="lazy" width="800" height="450">
+                    <img src="img/web_dev.jpg" alt="Project 4 Thumbnail">
                     <div class="project-info">
-                        <h3>Website Design</h3>
-                        <p>Akshar Gaming Arena is a comprehensive web platform designed to immerse users in the world of gaming. It showcases a curated selection of gaming gadgets and popular titles, offering enthusiasts a centralized hub to explore and learn about the latest in gaming technology and entertainment.</p>
+                        <h3>Web Apps</h3>
+                        <p>Describe a web application you built, perhaps one that uses a database or has user
+                            authentication.</p>
                         <div class="technologies">
                             <span>HTML</span><span>CSS</span><span>JavaScript</span>
                         </div>
@@ -257,7 +253,7 @@
                         Unsplash for Project Image (example search: "web app interface dark", "django code")
                         Image source: https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGphbmdvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/portfolio.png" alt="Project 5 Thumbnail" loading="lazy" width="800" height="450">
+                    <img src="img/portfolio.png" alt="Project 5 Thumbnail">
                     <div class="project-info">
                         <h3>Personal Portfolio Website</h3>
                         <p>A modern, responsive portfolio website built from scratch showcasing my projects, skills, and
@@ -287,7 +283,7 @@
                         Unsplash for Project Image (example search: "web app interface dark", "django code")
                         Image source: https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGphbmdvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/app_dev.jpg" alt="Project 4 Thumbnail" loading="lazy" width="800" height="450">
+                    <img src="img/app_dev.jpg" alt="Project 4 Thumbnail">
                     <div class="project-info">
                         <h3>Color Flood Game - Android App</h3>
                         <p>A challenging puzzle game developed for Android where players strategically flood the board with colors to 
@@ -312,168 +308,96 @@
         </section>
 
         <!-- Education Section -->
-<section id="education" class="section">
-    <h2>Education Journey</h2>
-    <div class="education-timeline">
-        <div class="education-item">
-            <div class="education-badge">
-                <i class="fas fa-university"></i>
-            </div>
-            <div class="education-content">
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <div class="education-item">
                 <h3>BS in Data Science and Programming</h3>
-                <p class="institution">Indian Institute of Technology, Madras (IIT Madras)</p>
-                <p class="duration"><i class="far fa-calendar-alt"></i> 2023 - 2027</p>
-                <div class="education-details">
-                    <p class="focus-areas">Focus Areas:</p>
-                    <ul>
-                        <li><i class="fas fa-chart-line"></i> Statistical Modeling</li>
-                        <li><i class="fas fa-brain"></i> Machine Learning</li>
-                        <li><i class="fas fa-database"></i> Big Data Analytics</li>
-                        <li><i class="fas fa-code"></i> Software Development</li>
-                    </ul>
-                </div>
+                <p class="institution"><i class="fas fa-university"></i> Indian Institute of Technology, Madras (IIT
+                    Madras)</p>
+                <p class="duration">Expected Graduation: 2027</p>
+                <p>Focusing on statistical modeling, machine learning, big data analytics, and software development.</p>
             </div>
-        </div>
-
-        <div class="education-item">
-            <div class="education-badge">
-                <i class="fas fa-school"></i>
-            </div>
-            <div class="education-content">
+            <div class="education-item">
                 <h3>Higher Secondary Education (12th)</h3>
-                <p class="institution">Govt. Sr. Sec. School New Building Sirohi, Rajasthan</p>
-                <p class="duration"><i class="far fa-calendar-alt"></i> 2022 - 2023</p>
-                <div class="education-details">
-                    <div class="score"><i class="fas fa-star"></i> Score: 92%</div>
-                    <p>Science Stream with specialization in:</p>
-                    <ul>
-                        <li><i class="fas fa-square-root-alt"></i> Mathematics</li>
-                        <li><i class="fas fa-laptop-code"></i> Computer Science</li>
-                    </ul>
-                </div>
+                <p class="institution"><i class="fas fa-school"></i> Govt. Sr. Sec. School New Building Sirohi,
+                    Rajasthan</p>
+                <p class="duration">2022-2023</p>
+                <p>Achieved 92% in Science stream with focus on Mathematics and Computer Science</p>
             </div>
-        </div>
-
-        <div class="education-item">
-            <div class="education-badge">
-                <i class="fas fa-graduation-cap"></i>
-            </div>
-            <div class="education-content">
+            <div class="education-item">
                 <h3>Secondary Education (10th)</h3>
-                <p class="institution">Govt. Sr. Sec. School New Building Sirohi, Rajasthan</p>
-                <p class="duration"><i class="far fa-calendar-alt"></i> 2020 - 2021</p>
-                <div class="education-details">
-                    <div class="score"><i class="fas fa-star"></i> Score: 96%</div>
-                    <p>Distinction in:</p>
-                    <ul>
-                        <li><i class="fas fa-calculator"></i> Mathematics</li>
-                        <li><i class="fas fa-atom"></i> Science</li>
-                    </ul>
-                </div>
+                <p class="institution"><i class="fas fa-school"></i> Govt. Sr. Sec. School New Building Sirohi,
+                    Rajasthan</p>
+                <p class="duration">2020-2021</p>
+                <p>Secured 96% with distinction in Mathematics and Science</p>
             </div>
-        </div>
-    </div>
-</section>
 
+        </section>
+
+        <!-- Contact Section -->
         <section id="contact" class="section">
-    <h2>Let's Connect</h2>
-    <p class="section-subtitle">Have a question or want to work together?</p>
-    
-    <div class="contact-container">
-        <div class="contact-info">
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-map-marker-alt"></i>
-                </div>
-                <h3>Location</h3>
-                <p>Sirohi, Rajasthan, India</p>
-            </div>
+            <div class="contact-container">
+                <h2>Get In Touch</h2>
 
-            <div class="contact-links">
-                <a href="mailto:vivekmali407@gmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i>
-                    <div class="link-content">
-                        <h4>Email</h4>
+                <div class="contact-links">
+                    <a href="mailto:vivekmali407@gmail.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
                         <span>vivekmali407@gmail.com</span>
-                    </div>
-                </a>
-                <a href="https://www.linkedin.com/in/vivekkumarmali" target="_blank" class="contact-link">
-                    <i class="fab fa-linkedin"></i>
-                    <div class="link-content">
-                        <h4>LinkedIn</h4>
-                        <span>Connect with me</span>
-                    </div>
-                </a>
-                <a href="https://github.com/24f2002719" target="_blank" class="contact-link">
-                    <i class="fab fa-github"></i>
-                    <div class="link-content">
-                        <h4>GitHub</h4>
-                        <span>See my code</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-
-        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            <input type="hidden" name="access_key" value="3bf874ca-6596-4d90-ac51-a8b6c0794618">
-            
-            <div class="form-header">
-                <h3>Send Message</h3>
-                <p>I'll get back to you as soon as possible</p>
-            </div>
-
-            <div class="form-group">
-                <div class="input-container">
-                    <i class="fas fa-user"></i>
-                    <input type="text" id="name" name="name" required>
-                    <label for="name">Your Name</label>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vivekkumarmali" target="_blank" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/24f2002719" target="_blank" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
                 </div>
-            </div>
 
-            <div class="form-group">
-                <div class="input-container">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" name="email" required>
-                    <label for="email">Your Email</label>
-                </div>
-            </div>
+                <!-- Replace the existing form with this updated version -->
+                <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <!-- Add your Web3Forms access key -->
+                    <input type="hidden" name="access_key" value="3bf874ca-6596-4d90-ac51-a8b6c0794618">
 
-            <div class="form-group">
-                <div class="input-container">
-                    <i class="fas fa-comment-alt"></i>
-                    <textarea id="message" name="message" required></textarea>
-                    <label for="message">Your Message</label>
-                </div>
-            </div>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
 
-            <button type="submit" class="submit-btn">
-                <span>Send Message</span>
-                <i class="fas fa-paper-plane"></i>
-            </button>
-        </form>
-    </div>
-</section>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required
+                            placeholder="Write your message here..."></textarea>
+                    </div>
+
+                    <!-- Optional: Add spam protection -->
+                    <input type="hidden" name="webhook-id" value="your-webhook-id">
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                    <button type="submit" class="btn btn-primary">
+                        <span>Send Message</span>
+                        <div class="submit-loading" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i>
+                        </div>
+                    </button>
+                </form>
+
+            </div>
+        </section>
 
         <!-- Footer -->
         <footer>
             <p>© <span id="currentYear"></span> Vivek Kumar Mali. All Rights Reserved.</p>
         </footer>
     </div>
-    <script src="script/cursor.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
 
-    <script src="script/animations.js" defer></script>
-    <script src="particles.min.js" defer></script>
-    <script src="script/script.js" defer></script>
-    <script>
-        AOS.init();
-        const scroll = new LocomotiveScroll({
-            el: document.querySelector('[data-scroll-container]'),
-            smooth: true
-        });
-    </script>
-    
+    <script src="particles.min.js"></script>
+    <script src="script/script.js"></script>
 </body>
-
 
 </html>
