@@ -10,10 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="script/cursor.js"></script>
-        <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
-    <script src="script/animations.js"></script>
+    
     <script>
         AOS.init();
         const scroll = new LocomotiveScroll({
@@ -90,7 +87,7 @@
             <div class="about-content">
                 <div class="about-image">
                     <!-- Make sure profile-pic.jpg has a transparent or dark-friendly background -->
-                    <img src="img/profile.jpeg" alt="Vivek Kumar Mali">
+                    <img src="img/profile.jpeg" alt="Vivek Kumar Mali" loading="lazy" width="300" height="300">
                 </div>
                 <div class="about-text">
                     <p>
@@ -164,7 +161,7 @@
                         Unsplash for Project Image (example search: "data visualization dark", "abstract code pattern")
                         Image source: https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGF0YSUyMHZpc3VhbGl6YXRpb258ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/python_projects.jpg" alt="Project 1 Thumbnail" >
+                    <img src="img/python_projects.jpg" alt="Project 1 Thumbnail" loading="lazy" width="800" height="450" >
                     <div class="project-info">
                         <h3>Python Projects Collection</h3>
                         <p>A collection of interactive Python applications showcasing fundamental programming concepts
@@ -188,7 +185,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="img/data_visualization.jpg" alt="BDM Project Thumbnail">
+                    <img src="img/data_visualization.jpg" alt="BDM Project Thumbnail" loading="lazy" width="800" height="450">
                     <div class="project-info">
                         <h3>Business Data Management Capstone</h3>
                         <p>Developed comprehensive business analytics solution analyzing market trends and customer
@@ -225,7 +222,7 @@
                         Unsplash for Project Image (example search: "machine learning abstract dark", "neural network glow")
                         Image source: https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fG1hY2hpbmUlMjBsZWFybmluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/macine_learning.jpg" alt="Project 2 Thumbnail">
+                    <img src="img/macine_learning.jpg" alt="Project 2 Thumbnail" loading="lazy" width="800" height="450">
                     <div class="project-info">
                         <h3>ML Model for Crop and Fertilizer Recommandation</h3>
                         <p>This project aims to assist farmers and agricultural professionals by providing intelligent recommendations for crop selection and fertilizer usage based on environmental and soil conditions. By leveraging machine learning techniques, the system analyzes input parameters to suggest optimal agricultural practices.</p>
@@ -245,7 +242,7 @@
                         Unsplash for Project Image (example search: "web app interface dark", "django code")
                         Image source: https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGphbmdvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/web_dev.jpg" alt="Project 4 Thumbnail">
+                    <img src="img/web_dev.jpg" alt="Project 4 Thumbnail" loading="lazy" width="800" height="450">
                     <div class="project-info">
                         <h3>Website Design</h3>
                         <p>Akshar Gaming Arena is a comprehensive web platform designed to immerse users in the world of gaming. It showcases a curated selection of gaming gadgets and popular titles, offering enthusiasts a centralized hub to explore and learn about the latest in gaming technology and entertainment.</p>
@@ -266,7 +263,7 @@
                         Unsplash for Project Image (example search: "web app interface dark", "django code")
                         Image source: https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGphbmdvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/portfolio.png" alt="Project 5 Thumbnail">
+                    <img src="img/portfolio.png" alt="Project 5 Thumbnail" loading="lazy" width="800" height="450">
                     <div class="project-info">
                         <h3>Personal Portfolio Website</h3>
                         <p>A modern, responsive portfolio website built from scratch showcasing my projects, skills, and
@@ -296,7 +293,7 @@
                         Unsplash for Project Image (example search: "web app interface dark", "django code")
                         Image source: https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGphbmdvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60
                     -->
-                    <img src="img/app_dev.jpg" alt="Project 4 Thumbnail">
+                    <img src="img/app_dev.jpg" alt="Project 4 Thumbnail" loading="lazy" width="800" height="450">
                     <div class="project-info">
                         <h3>Color Flood Game - Android App</h3>
                         <p>A challenging puzzle game developed for Android where players strategically flood the board with colors to 
@@ -468,9 +465,13 @@
             <p>© <span id="currentYear"></span> Vivek Kumar Mali. All Rights Reserved.</p>
         </footer>
     </div>
-
-    <script src="particles.min.js"></script>
-    <script src="script/script.js"></script>
+    
 </body>
+<script src="script/cursor.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
+
+    <script src="script/animations.js" defer></script>
+    <script src="particles.min.js" defer></script>
+    <script src="script/script.js" defer></script>
 
 </html>
