@@ -113,7 +113,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
         setTimeout(() => {
-            preloader.classList.add('loaded');
+           preloader.classList.add('loaded');
+            document.body.style.overflow = 'visible'; // Enable scrolling
+            
+            // Remove preloader from DOM after animation
+            setTimeout(() => {
+                preloader.remove();
+            }, 500);
         }, 500);
     });
 
