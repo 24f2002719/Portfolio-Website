@@ -113,14 +113,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const preloader = document.getElementById('preloader');
     window.addEventListener('load', () => {
         setTimeout(() => {
-           preloader.classList.add('loaded');
-            document.body.style.overflow = 'visible'; // Enable scrolling
-            
-            // Remove preloader from DOM after animation
-            setTimeout(() => {
-                preloader.remove();
-            }, 500);
+    if (document.getElementById('preloader')) {
+        document.getElementById('preloader').classList.add('loaded');
+        document.body.style.overflow = 'visible';
+        setTimeout(() => {
+            const pre = document.getElementById('preloader');
+            if (pre) pre.remove();
         }, 500);
+    }
+}, 4000);
     });
 
     // --- Navigation functionality ---
